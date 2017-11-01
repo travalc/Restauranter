@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reviews</title>
+</head>
+<body>
+
+    @{
+        foreach(var review in ViewBag.reviews)
+        {
+            <h2>Review for: @review.restaurant - @review.stars stars</h2>
+            <h3>Reviewer: @review.reviewer, @review.date</h3>
+            <p>@review.review</p>
+            <hr>
+        }
+    }
+</body>
+</html>
